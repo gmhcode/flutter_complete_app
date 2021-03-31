@@ -29,7 +29,20 @@ class Quiz extends StatelessWidget {
         ),
         ...(questions[questionIndex]["answers"] as List<String>).map((answer) {
           return Answer(selectHandler, answer);
-        }).toList()
+        }),
+        TextButton(
+          onPressed: () {},
+          child: Text("A Flat Button"),
+          style: TextButton.styleFrom(primary: Colors.orange),
+        ),
+        OutlinedButton(
+          onPressed: () {},
+          style: OutlinedButton.styleFrom(
+            primary: Colors.orange,
+            side: BorderSide(color: Colors.orange),
+          ),
+          child: Text("Button"),
+        )
       ],
     );
   }
